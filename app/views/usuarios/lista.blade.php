@@ -1,15 +1,20 @@
-<h1>
-  Usuarios
-  
-</h1>
+@extends('layouts.master')
  
+@section('sidebar')
+     @parent
+     Lista de usuarios
+@stop
+ 
+@section('content')
+        <h1>Usuarios</h1>
+        {{ HTML::link('usuarios/nuevo', 'Crear Usuario'); }}
  
 <ul>
   @foreach($usuarios as $usuario)
-  <!-- Equivalente en Blade a <?php //foreach ($usuarios as $usuario) ?> -->
-    <li>
-      {{ $usuario->username.' '.$usuario->email }} 
-    </li>
-    <!-- Equivalente en Blade a <?php //echo $usuario->username.' '.$usuario->email ?> -->
-  @endforeach 
-</ul>
+           <li>
+    {{ HTML::link( 'usuarios/'.$usuario->id , $usuario->username.' '.$usuario->email ) }}
+      
+  </li>
+          @endforeach
+  </ul>
+@stop
