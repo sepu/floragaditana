@@ -81,3 +81,18 @@ Route::get('fotosespecie/{id}', array('uses'=>'FotosEspecieController@verFoto'))
 // solo hay que tomar en cuenta que los parámetros van entre llaves {}
 // si el parámetro es opcional se colocar un signo de interrogación {parámetro?}
 
+// -------- COLORES -------------
+
+Route::get('colores', array('uses' => 'ColoresController@mostrarColores'));
+
+Route::get('colores/nuevo', array('uses' => 'ColoresController@nuevoColor'));
+ 
+Route::post('colores/crear', array('uses' => 'ColoresController@crearColor'));
+// esta ruta es a la cual apunta el formulario donde se introduce la información del color 
+// como podemos observar es para recibir peticiones POST 
+ 
+Route::get('colores/{id}', array('uses'=>'ColoresController@verColor'));
+// esta ruta contiene un parámetro llamado {id}, que sirve para indicar el id del color que deseamos buscar 
+// este parámetro es pasado al controlador, podemos colocar todos los parámetros que necesitemos 
+// solo hay que tomar en cuenta que los parámetros van entre llaves {}
+// si el parámetro es opcional se colocar un signo de interrogación {parámetro?}
