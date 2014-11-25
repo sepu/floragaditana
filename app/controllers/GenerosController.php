@@ -5,7 +5,7 @@ class GenerosController extends BaseController {
     /**
      * Muestra la lista con todos los generos
      */
-    public function mostrarGenero()
+    public function mostrarGeneros()
     {
         $generos = Genero::all();
         return View::make('generos.lista', array('generos' => $generos));

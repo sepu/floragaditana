@@ -17,7 +17,7 @@ class FamiliasController extends BaseController {
      */
     public function nuevaFamilia()
     {
-        return View::make('familia.crear');
+        return View::make('familias.crear');
     }
  
  

@@ -16,6 +16,8 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+//USUARIOS
+
 Route::get('usuarios', array('uses' => 'UsuariosController@mostrarUsuarios'));
 
 Route::get('usuarios/nuevo', array('uses' => 'UsuariosController@nuevoUsuario'));
@@ -26,6 +28,55 @@ Route::post('usuarios/crear', array('uses' => 'UsuariosController@crearUsuario')
  
 Route::get('usuarios/{id}', array('uses'=>'UsuariosController@verUsuario'));
 // esta ruta contiene un parámetro llamado {id}, que sirve para indicar el id del usuario que deseamos buscar 
+// este parámetro es pasado al controlador, podemos colocar todos los parámetros que necesitemos 
+// solo hay que tomar en cuenta que los parámetros van entre llaves {}
+// si el parámetro es opcional se colocar un signo de interrogación {parámetro?}
+
+// -------- FAMILIAS -------------
+
+Route::get('familias', array('uses' => 'FamiliasController@mostrarFamilias'));
+
+Route::get('familias/nuevo', array('uses' => 'FamiliasController@nuevaFamilia'));
+ 
+Route::post('familias/crear', array('uses' => 'FamiliasController@crearFamilia'));
+// esta ruta es a la cual apunta el formulario donde se introduce la información de la familia 
+// como podemos observar es para recibir peticiones POST 
+ 
+Route::get('familias/{id}', array('uses'=>'FamiliasController@verFamilia'));
+// esta ruta contiene un parámetro llamado {id}, que sirve para indicar el id de la familia que deseamos buscar 
+// este parámetro es pasado al controlador, podemos colocar todos los parámetros que necesitemos 
+// solo hay que tomar en cuenta que los parámetros van entre llaves {}
+// si el parámetro es opcional se colocar un signo de interrogación {parámetro?}
+
+// -------- GENEROS -------------
+
+Route::get('generos', array('uses' => 'GenerosController@mostrarGeneros'));
+
+Route::get('generos/nuevo', array('uses' => 'GenerosController@nuevoGenero'));
+ 
+Route::post('generos/crear', array('uses' => 'GenerosController@crearGenero'));
+// esta ruta es a la cual apunta el formulario donde se introduce la información del genero 
+// como podemos observar es para recibir peticiones POST 
+ 
+Route::get('generos/{id}', array('uses'=>'GenerosController@verGenero'));
+// esta ruta contiene un parámetro llamado {id}, que sirve para indicar el id del genero que deseamos buscar 
+// este parámetro es pasado al controlador, podemos colocar todos los parámetros que necesitemos 
+// solo hay que tomar en cuenta que los parámetros van entre llaves {}
+// si el parámetro es opcional se colocar un signo de interrogación {parámetro?}
+
+// -------- FOTOS DE ESPECIE -------------
+
+
+Route::get('fotosespecie', array('uses' => 'FotosEspecieController@mostrarFotos'));
+
+Route::get('fotosespecie/nuevo', array('uses' => 'FotosEspecieController@nuevaFoto'));
+ 
+Route::post('fotosespecie/crear', array('uses' => 'FotosEspecieController@crearFoto'));
+// esta ruta es a la cual apunta el formulario donde se introduce la información de la imagen de la especie 
+// como podemos observar es para recibir peticiones POST 
+ 
+Route::get('fotosespecie/{id}', array('uses'=>'FotosEspecieController@verFoto'));
+// esta ruta contiene un parámetro llamado {id}, que sirve para indicar el id de la imagen de la especie que deseamos buscar 
 // este parámetro es pasado al controlador, podemos colocar todos los parámetros que necesitemos 
 // solo hay que tomar en cuenta que los parámetros van entre llaves {}
 // si el parámetro es opcional se colocar un signo de interrogación {parámetro?}

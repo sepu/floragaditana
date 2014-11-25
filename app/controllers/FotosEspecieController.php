@@ -8,7 +8,7 @@ class FotosEspecieController extends BaseController {
     public function mostrarFotos()
     {
         $fotos = Usuario::all();
-        return View::make('fotos.lista', array('fotos' => $fotos));
+        return View::make('fotosespecie.lista', array('fotos' => $fotos));
     }
  
  
@@ -17,7 +17,7 @@ class FotosEspecieController extends BaseController {
      */
     public function nuevaFoto()
     {
-        return View::make('fotos.crear');
+        return View::make('fotosespecie.crear');
     }
  
  
@@ -47,7 +47,7 @@ class FotosEspecieController extends BaseController {
         // para buscar la foto utilizamos el metido find que nos proporciona Laravel 
         // este método devuelve un objete con toda la información que contiene una foto de una especie
     
-    return View::make('fotos.ver', array('foto' => $foto));
+    return View::make('fotosespecie.ver', array('foto' => $foto));
     }
  
 }
