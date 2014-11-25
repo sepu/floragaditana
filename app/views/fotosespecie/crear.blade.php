@@ -2,24 +2,19 @@
  
 @section('sidebar')
      @parent
-     Formulario de usuario
+     Formulario de fotografías para una especie
 @stop
  
 @section('content')
-        {{ HTML::link('usuarios', 'volver'); }}
+        {{ HTML::link('fotos', 'volver'); }}
         <h1>
-  Crear Usuario
-      
-    
-  
+  Añadir Foto  
 </h1>
-        {{ Form::open(array('url' => 'usuarios/crear')) }}
-            {{Form::label('username', 'Usuario')}}
-            {{Form::text('username', '')}}
-            {{Form::label('email', 'Email')}}
-            {{Form::text('email', 'Ej. elvira@gmail.com')}}
-            {{Form::label('password', 'Contraseña')}}
-            {{Form::text('password', '')}}
+        {{ Form::open(array('url' => 'fotosespecie/crear')) }}
+            {{Form::label('nombrefoto', 'Imagen')}}
+            {{Form::text('nombrefoto', '')}}
+            {{Form::label('idespecie', 'Especie')}}
+            {{Form::text('idespecie', '')}}
             {{Form::submit('Guardar')}}
         {{ Form::close() }}
 @stop

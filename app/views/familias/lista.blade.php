@@ -2,17 +2,17 @@
  
 @section('sidebar')
      @parent
-     Lista de usuarios
+     Lista de familias
 @stop
  
 @section('content')
-        <h1>Usuarios</h1>
-        {{ HTML::link('usuarios/nuevo', 'Crear Usuario'); }}
+        <h1>Familias</h1>
+        {{ HTML::link('familias/nuevo', 'Crear Familia'); }}
  
 <ul>
-  @foreach($usuarios as $usuario)
+  @foreach($familias as $familia)
            <li>
-    {{ HTML::link( 'usuarios/'.$usuario->id , $usuario->username.' '.$usuario->email ) }}
+    {{ HTML::link( 'familias/'.$familia->id , $familia->nombrefam) }}
       
   </li>
           @endforeach

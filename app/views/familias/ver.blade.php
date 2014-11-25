@@ -2,18 +2,18 @@
  
 @section('sidebar')
      @parent
-     Información de usuario
+     Información de familia
 @stop
  
 @section('content')
-        {{ HTML::link('usuarios', 'Volver'); }}
+        {{ HTML::link('familias', 'Volver'); }}
         <h1>
-  Usuario {{$usuario->id}}
+  Familia {{$familia->id}}
       
 </h1>
         
-        {{ $usuario->username .' '.$usuario->email }}
+        {{ $familia->nombrefam}}
         
 <br />
-        {{ $usuario->created_at}}
+        {{ $familia->created_at}}
 @stop

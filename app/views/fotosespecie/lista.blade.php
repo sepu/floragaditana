@@ -2,17 +2,17 @@
  
 @section('sidebar')
      @parent
-     Lista de usuarios
+     Lista de fotografías para una especie
 @stop
  
 @section('content')
-        <h1>Usuarios</h1>
-        {{ HTML::link('usuarios/nuevo', 'Crear Usuario'); }}
+        <h1>Fotografias de una especie</h1>
+        {{ HTML::link('fotosespecie/nuevo', 'Añadir una imagen'); }}
  
 <ul>
-  @foreach($usuarios as $usuario)
+  @foreach($fotos as $foto)
            <li>
-    {{ HTML::link( 'usuarios/'.$usuario->id , $usuario->username.' '.$usuario->email ) }}
+    {{ HTML::link( 'fotosespecie/'.$foto->id , $foto->nombrefoto.' '.$foto->idespecie ) }}
       
   </li>
           @endforeach

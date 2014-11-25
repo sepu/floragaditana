@@ -2,18 +2,18 @@
  
 @section('sidebar')
      @parent
-     Información de usuario
+     Información de Fotografías de una especie
 @stop
  
 @section('content')
-        {{ HTML::link('usuarios', 'Volver'); }}
+        {{ HTML::link('fotos', 'Volver'); }}
         <h1>
-  Usuario {{$usuario->id}}
+  Usuario {{$foto->id}}
       
 </h1>
         
-        {{ $usuario->username .' '.$usuario->email }}
+        {{ $foto->nombrefoto .' '.$foto->idespecie }}
         
 <br />
-        {{ $usuario->created_at}}
+        {{ $foto->created_at}}
 @stop

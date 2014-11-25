@@ -2,24 +2,17 @@
  
 @section('sidebar')
      @parent
-     Formulario de usuario
+     Formulario de familias
 @stop
  
 @section('content')
-        {{ HTML::link('usuarios', 'volver'); }}
+        {{ HTML::link('familias', 'volver'); }}
         <h1>
-  Crear Usuario
-      
-    
-  
+  Crear Familia  
 </h1>
-        {{ Form::open(array('url' => 'usuarios/crear')) }}
-            {{Form::label('username', 'Usuario')}}
-            {{Form::text('username', '')}}
-            {{Form::label('email', 'Email')}}
-            {{Form::text('email', 'Ej. elvira@gmail.com')}}
-            {{Form::label('password', 'Contraseña')}}
-            {{Form::text('password', '')}}
+        {{ Form::open(array('url' => 'familias/crear')) }}
+            {{Form::label('nombrefam', 'Nombre')}}
+            {{Form::text('nombrefam', '')}}
             {{Form::submit('Guardar')}}
         {{ Form::close() }}
 @stop
