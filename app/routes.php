@@ -96,3 +96,19 @@ Route::get('colores/{id}', array('uses'=>'ColoresController@verColor'));
 // este parámetro es pasado al controlador, podemos colocar todos los parámetros que necesitemos 
 // solo hay que tomar en cuenta que los parámetros van entre llaves {}
 // si el parámetro es opcional se colocar un signo de interrogación {parámetro?}
+
+// -------- ESPECIES -------------
+
+Route::get('especies', array('uses' => 'EspeciesController@mostrarEspecies'));
+
+Route::get('especies/nuevo', array('uses' => 'EspeciesController@nuevoEspecie'));
+ 
+Route::post('especies/crear', array('uses' => 'EspeciesController@crearEspecie'));
+// esta ruta es a la cual apunta el formulario donde se introduce la información de la especie 
+// como podemos observar es para recibir peticiones POST 
+ 
+Route::get('especies/{id}', array('uses'=>'EspeciesController@verEspecie'));
+// esta ruta contiene un parámetro llamado {id}, que sirve para indicar el id de la especie que deseamos buscar 
+// este parámetro es pasado al controlador, podemos colocar todos los parámetros que necesitemos 
+// solo hay que tomar en cuenta que los parámetros van entre llaves {}
+// si el parámetro es opcional se colocar un signo de interrogación {parámetro?}
